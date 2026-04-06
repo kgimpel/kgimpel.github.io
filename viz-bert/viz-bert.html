@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<!--<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Visualizing BERT</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-fluid" style="padding-top: 0px;">
+      <div class="jumbotron maintext" style="background-color: #ffffff; font-family: 'Roboto', sans-serif; font-size: 20px;">
+	<!--<hr class="bluebarfit">-->
+	<span class="maintexttitle center">Visualizing BERT</span>
+	<hr class="bluebarfit">
+	<br>
+This page hosts a Jupyter Notebook for creating several visualizations using BERT, including vocabulary embeddings, position embeddings, and contextualized embeddings given a file with sentences containing a given word. For the example visualizations on this page, we're using BERT-large-uncased with whole word masking.<br>
+<br> 
+The notebook uses <a href="https://github.com/huggingface/transformers">HuggingFace transformers</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html">t-SNE in sklearn</a>, and <a href="https://github.com/Phlya/adjustText">adjustText</a>. <br>
+<br>
+        Downloads:
+	<p class="half-line">&nbsp;</p>
+	<ul>
+	<li><a href="viz-bert.zip">viz-bert.zip</a>: notebook for generating visualizations along with 15,000 instances of the word <i>values</i></li>
+        <li><a href="viz-bert-voc.pdf">viz-bert-voc.pdf</a>: visualization of vocabulary embeddings</li>
+	<li><a href="viz-bert-pos.pdf">viz-bert-pos.pdf</a>: visualization of position embeddings</li>
+	<li><a href="viz-bert-ctx-values.pdf">viz-bert-ctx-values.pdf</a>: visualization of contextualized embeddings for <i>values</i></li>
+        </ul>
+	<br>
+	First, let's visualize the vocabulary embeddings:
+	<br><br>
+	<img src="viz-bert-voc.png" width="1060" class="center img-responsive imgborder"><br>
+	This looks pretty similar to typical <a href="../wordembviz/wordembviz.html">word embedding visualizations</a>. Zooming in on the upper part shows us some clusters of verbs that have similar meanings:<br>
+	<br>
+	<img src="viz-bert-voc-verbs.png" width="1060" class="center img-responsive imgborder"><br>
+	One difference compared to earlier word embeddings is the presense of partial-word units (those starting with ##). These are mostly in the lower part of the visualization, largely separated from the rest. Below we see clusters of common suffixes of English words:<br><br>
+	<img src="viz-bert-voc-suffixes.png" width="1060" class="center img-responsive imgborder"><br>
+	And, a bit to the left, common suffixes of named entities:<br><br>
+	<img src="viz-bert-voc-entities.png" width="1060" class="center img-responsive imgborder"><br>
+	While most partial-word units are separated from the rest, some are mixed in with whole-word units:<br><br>
+	<img src="viz-bert-voc-house.png" width="1060" class="center img-responsive imgborder"><br>
+	
+	<br>
+	We can similarly visualize BERT's absolute position embeddings. 
+While the first and last positions are separated in the lower right, the others form a nearly-unbroken chain in ascending order from 1 to 510. Different runs of t-SNE can lead to different levels of cohesion in the chain, but the results are qualitatively similar.<br><br>
+	<img src="viz-bert-pos.png" width="1060" class="center img-responsive imgborder"><br>
+
+	<br><br>
+	Next, we will use BERT to embed a word in its context and visualize the final layer for the position of the word of interest. We will consider the word <i>values</i>. First, here's its location in the vocabulary embeddings:<br><br>
+	<img src="viz-bert-voc-values.png" width="1060" class="center img-responsive imgborder"><br>
+	Now, we use BERT to embed 15,000 instances of <i>values</i> in sentences drawn from Wikipedia and Project Gutenberg, then run t-SNE on the embeddings taken from the final layer. Below we plot 750 instances of <i>values</i> along with their sentence contexts (up to 5 subword units to either side):<br><br>
+	<img src="viz-bert-ctx-values-full.png" width="1060" class="center img-responsive imgborder"><br>
+	Zooming in, we find different senses of the word in different areas of the visualization. The cluster in the lower left corresponds to verbal uses:<br><br>
+	<img src="viz-bert-ctx-values-verb.png" width="1060" class="center img-responsive imgborder"><br>
+	The remaining are mostly nominal uses. On the left are uses of the sense related to principles or standards:<br><br>
+	<img src="viz-bert-ctx-values-moral.png" width="1060" class="center img-responsive imgborder"><br>
+	To the right we find scientific and mathematical uses; the following shows the lower right corner:<br><br>
+	<img src="viz-bert-ctx-values-math.png" width="1060" class="center img-responsive imgborder"><br>
+	How about the small cluster in the top center that's separated from the rest? These correspond to the phrase <i>production values</i>:<br><br>
+	<img src="viz-bert-ctx-values-prod.png" width="1060" class="center img-responsive imgborder"><br>
+	<br>
+	<br>
+	Please <a href="../contact.html">contact me</a> with issues, bug reports, etc.
+ 	<br>
+	<br>
+	<a href="../teaching.html">Back</a> to my teaching materials.
+	<br>
+<hr class="bluebarfit">
+      </div>
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
