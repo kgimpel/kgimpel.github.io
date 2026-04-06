@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>
+    <title>31190: Natural Language Processing</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid container-fluid-mynavbar">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">TTIC 31190: Natural Language Processing</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="lectures.html">lectures</a></li>
+              <li><a href="assignments.html">assignments</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron maintext">
+
+        This is the course webpage for the Winter 2016 version of TTIC 31190: Natural Language Processing.<br>
+        For the Spring 2018 course, go <a href="../31190-s18/index.html">here</a>.<br><br>
+	<span class="maintextminorheader">Quarter:</span> Winter 2016<br>
+	<span class="maintextminorheader">Time:</span> Tuesday/Thursday 10:35-11:50 am<br>
+	<span class="maintextminorheader">Location:</span> Room 526 (fifth floor), <a class="name" href="http://www.ttic.edu/">TTIC</a><br>
+	<br>
+	<span class="maintextminorheader">Instructor:</span> <a class="name" href="http://ttic.uchicago.edu/~kgimpel/index.html">Kevin Gimpel</a><br>
+	<span class="maintextminorheader">Instructor Office Hours:</span> Mondays 3-4pm, Room 531, <a class="name" href="http://www.ttic.edu/">TTIC</a>, or by appointment<br>
+	<span class="maintextminorheader">Teaching Assistant:</span> Lifu Tu<br>
+	<span class="maintextminorheader">Teaching Assistant Office Hours:</span> Thursdays 4-5pm, Room 501, <a class="name" href="http://www.ttic.edu/">TTIC</a><br>
+	<br>
+	<span class="maintextminorheader">Midterm:</span> February 18<br>
+	<br>
+	<span class="maintextminorheader">Prerequisites:</span> 
+	There are no formal course prerequisites, but I will assume that you have some programming experience and that you are familiar with basic concepts from probability and calculus. No specific programming language will be required.<br>
+	<p>
+	Undergraduates are welcome to take the course if they have the relevant background, though they may not be able to enroll online. Please bring an enrollment approval form to me at the first lecture and I will sign it.
+	</p>
+<br>
+<span class="maintextheader">Contents:</span><br>
+	<a href="#textbooks">Textbooks</a><br>
+	<a href="#grading">Grading</a><br>
+	<a href="#topics">Topics</a><br>
+	<a href="#project">Project</a><br>
+	<a href="#collab">Collaboration Policy</a><br>
+	<a href="#lateness">Lateness Policy</a><br>
+	<br><br>
+
+	<a name="textbooks"></a>
+<span class="maintextheader">Textbooks</span><br>
+	All textbooks are optional.<br>
+	<br>
+	Primary:<br>
+	<a href="https://www.cs.colorado.edu/~martin/slp.html">SLP2</a>: Daniel Jurafsky and James H. Martin.  Speech and Language Processing (2nd Edition). Pearson: Prentice Hall. 2009.<br>
+
+	<a href="https://web.stanford.edu/~jurafsky/slp3/">SLP3</a>: Drafts of some chapters of the 3rd edition are <a href="https://web.stanford.edu/~jurafsky/slp3/">freely available online</a>.<br>
+<br>
+
+Additional readings drawn from the following:<br>
+
+<a href="http://theanalysisofdata.com/probability/0_1.html">TAOD</a>: Guy Lebanon. The Analysis of Data, Volume 1: Probability. (<a href="http://theanalysisofdata.com/probability/0_1.html">freely available online</a>)<br>
+
+<a href="http://www-nlp.stanford.edu/IR-book/">IIR</a>: Christopher D. Manning, Prabhakar Raghavan, and Hinrich Sch&uuml;tze, Introduction to Information Retrieval.  Cambridge University Press. 2008. (<a href="http://www-nlp.stanford.edu/IR-book/">freely available online</a>)<br>
+	<!--Additional selected readings shown in the Lecture Plan below.-->
+	<br><br><br>
+
+	<a name="grading"></a>
+<span class="maintextheader">Grading</span><br>
+	3 assignments (15% each)<br>
+midterm exam (15%)<br>
+course project (35%):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+project proposal and meeting with instructor (10%)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+class presentation (5%)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+final report (20%)<br>
+class participation (5%)<br>
+<br>
+<br><br>
+
+	<a name="topics"></a>
+<span class="maintextheader">Topics</span><br>
+	<ul>
+	<li>Introduction: NLP applications, challenges of computing with language, experimental principles</li>
+	<li>Text Classification: spam classification, sentiment analysis, topic classification, classifiers, linear models, features, naive Bayes, training linear classifiers via loss function optimization, loss functions, stochastic gradient descent</li>
+	<li>Words: what is a word?, tokenization, word senses, morphology</li>
+	<li>Lexical Semantics: distributional semantics, word embeddings, word clustering</li>
+	<li>Language Modeling: n-gram models, smoothing</li>
+	<li>Sequence Labeling: part-of-speech tagging, named entity recognition, hidden Markov models, conditional random fields, dynamic programming, Viterbi</li>
+	<li>Syntax: weighted context-free grammars, dependency syntax, parsing algorithms</li>
+	<li>Neural Methods in NLP: representation learning, neural language models, neural methods for classification</li>
+	<li>Structured Neural Networks: recurrent, recursive, and convolutional nets for NLP</li>
+	<li>Semantics: compositionality, semantic role labeling, frame semantics, semantic parsing</li>
+	<li>Unsupervised NLP: unsupervised tagging/parsing, Brown clustering, topic models</li>
+	<li>Machine Translation: word alignment, translation modeling, decoding</li>
+	<li>Other NLP Tasks: coreference resolution, question answering, summarization, conversational agents</li>
+	</ul>
+<br><br><br>
+        <a name="project"></a>
+<span class="maintextheader">Project</span><br>
+	The project proposal is due Feb. 16. Details are provided <a href="31190project-proposal.pdf">here</a>.<br>
+	The final project report is due March 17. Details are provided <a href="31190project-report.pdf">here</a>.<br>
+	We recommend that you use the ACL2016 LaTeX style files: <a href="http://acl2016.org/files/acl2016.zip">http://acl2016.org/files/acl2016.zip</a>.<br>
+	Analogous files for Microsoft Word are available <a href="https://www.cs.cmu.edu/~ark/EMNLP-2015/submissions.html">here</a>.<br>
+	<!--Email me (kgimpel@ttic.edu) to sign up for a 15-minute meeting slot during the week of Feb. 22.<br>
+	Free times are below (let me know if you can't make any of these).<br>
+	Monday, Feb. 22:<br>
+	<strike>10:00</strike><br>
+	<strike>10:15</strike><br>
+	<strike>10:30</strike><br>
+	3:00<br>
+	3:15<br>
+	3:30<br>
+	<strike>3:45</strike><br>
+	<br>Tuesday, Feb. 23:<br>
+	<strike>9:30</strike><br>
+	<strike>9:45</strike><br>
+	<strike>10:00</strike><br>
+	<strike>10:15</strike><br>
+	<br>Thursday, Feb. 25:<br>
+	<strike>12:00</strike><br>
+	<strike>12:15</strike><br>
+	<strike>12:30</strike><br>
+	12:45<br>-->
+	<br><br><br>
+        <a name="collab"></a>
+<span class="maintextheader">Collaboration Policy</span><br>
+You are welcome to discuss assignments with others in the course, but solutions and code must be written individually. 
+The project may be done individually or in a group of two. Each member of the group will receive the same grade for the project.<br>
+	<br><br><br>
+	<a name="lateness"></a>
+	<span class="maintextheader">Lateness Policy</span><br>
+	We want you to do the assignments, even if that means turning them in late (whether partially or fully). There will likely be a penalty assessed if assignments are turned in after the due dates, but we will continue to accept late submissions of assignments until the end of the quarter. <br>
+      </div>
+
+<!--<div class="jumbotron maintext">-->
+      <hr class="bluebar">
+    <!--</div>-->
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
