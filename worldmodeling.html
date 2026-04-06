@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<!--<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>World Modeling for Natural Language Understanding</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-fluid" style="padding-top: 0px;">
+      <div class="jumbotron maintext" style="background-color: #ffffff; font-family: 'Roboto', sans-serif; font-size: 20px;">
+	<!--<hr class="bluebarfit">-->
+	<span class="maintexttitle center">World Modeling for Natural Language Understanding</span>
+	<hr class="bluebarfit">
+	<br>	
+How should AI systems understand what they read? Should AI systems emulate people? How do <i>people</i> understand what they read?<br>
+<br>
+
+While there are many theoretical models of human reading comprehension (<a class="name" href="https://www.sciencedirect.com/science/article/pii/S0079742109510092">McNamara and Magliano, 2009</a>), certain concepts have drawn widespread support from psychologists and cognitive scientists. For example, human readers identify protagonists, attribute mental states to them, and expect them to act in a goal-directed manner; events are situated within spatiotemporal contexts; and causal links are formed among events (<a class="name" href="https://www.ncbi.nlm.nih.gov/pubmed/7938337">Graesser et al., 1994</a>; <a class="name" href="https://www.ncbi.nlm.nih.gov/pubmed/9522683">Zwaan and Radvansky, 1998</a>; <a class="name" href="http://www.cs.columbia.edu/~delson/pubs/Modeling-Narrative-Discourse_Elson_R4.pdf">Elson, 2012</a>; <i>inter alia</i>). We refer to this information as the <b>world</b> described by the text. 
+<br> 
+
+<br> 
+We seek to develop systems to automatically construct rich representations of the world  underlying the text being analyzed. In designing world construction models we use abstractions identified by cognitive scientists and psychologists as fundamental in human understanding and reading comprehension. We also design targeted probing tasks to enable fine-grained assessment of the extent to which systems have captured this information.
+<br>
+<br>
+There is a tension in the AI community between pattern recognition and model-building (<a class="name" href="https://arxiv.org/abs/1604.00289">Lake et al., 2017</a>). Pattern recognition, the dominant paradigm in most application areas, interprets learning as the ability to make predictions. Model-building, by contrast, seeks to construct a hypothesis that can explain a set of observations. This project seeks to develop a model-building framework for natural language understanding, taking inspiration from Lake et al. in using ideas from cognitive science and psychology. The goal is to develop AI systems that are highly effective while offering greater flexibility, robustness, and interpretability than methods based on pattern recognition.<br>
+<br> 
+Below we describe individual research projects oriented towards these goals:<br>
+<br>
+<a href="#memory">Memory-Augmented Neural Readers</a><br>
+<a href="#bounded">Bounded Memory Models for Coreference Resolution</a><br>
+<a href="#probing">Probing for Entity and Event Information in Contextualized Embeddings</a><br>
+<a href="#complex">Probing for Complex Meaning Information</a><br>
+<br>
+	<br>
+	<span id="memory" class="maintextheader" style="font-size: 28px;">Memory-Augmented Neural Readers</span>
+	<p class="half-line">&nbsp;</p>
+	We are developing memory-augmented neural networks in which the memory is designed to capture information 
+	about named entities in order to resolve references. Below is a visualization of our current model, PeTra ("People Tracking"), 
+	run on text from the <a class="name" href="https://research.google/tools/datasets/gap-coreference/">GAP dataset</a>: <br>
+	<br><img src="worldmodeling/petra-ex.jpg" width="1060" class="center img-responsive">
+	<br>
+	The visualization above shows a memory with four memory cells, showing overwrite (OW) and coreference (CR) scores for each 
+	memory cell at each position in the text. 
+	The model has learned to associate one memory cell with each entity mentioned, and correctly resolves the reference in the 
+	GAP annotations (the blue mentions in the text). 
+	<br>
+	<br>For more details, please see the following:<br>
+	<a href="https://arxiv.org/abs/2005.02990">PeTra: A Sparsely Supervised Memory Model for People Tracking</a><br>
+	<a class="name" href="http://ttic.uchicago.edu/~shtoshni/">Shubham Toshniwal</a>, 
+	<a class="name" href="https://aetting.github.io/">Allyson Ettinger</a>, 
+	<a class="name" href="http://ttic.uchicago.edu/~kgimpel/index.html">Kevin Gimpel</a>, 
+	<a class="name" href="http://ttic.uchicago.edu/~klivescu/">Karen Livescu</a><br>ACL 2020<br>
+	[<a href="https://arxiv.org/abs/2005.02990">arxiv</a>] 
+	[<a href="https://github.com/shtoshni92/petra">code</a>] 
+	[<a href="https://colab.research.google.com/drive/17xT1QKCbj_tOFpiszHxuLkhjXLPp_hkd?usp=sharing">colab</a>] 
+	[<a href="https://www.aclweb.org/anthology/2020.acl-main.481.bib">bib</a>]
+<br><br><br><br>
+<span id="bounded" class="maintextheader" style="font-size: 28px;">Bounded Memory Models for Coreference Resolution</span>
+<p class="half-line">&nbsp;</p>
+Coreference resolution systems are usually evaluated on short documents of a few hundred words. When seeking to run such systems on long documents, such as books, standard methods face challenges with runtime and memory usage. However, we can improve this situation by noting how, in typical texts, most entities have a very small "spread" (the number of tokens between the first and last mention of the entity). The histograms below show entity spreads in two coreference datasets: 
+<br><img src="worldmodeling/ent-spread.png" width="960" class="center img-responsive">
+<br> 
+Most entities have very small spreads in real-world documents. We can exploit this observation to design memory models that track a small, bounded number of entities, and to parameterize actions for the model to evict an entity currently being tracked in favor of a new entity encountered or to ignore an entity mention. The model learns to ignore and evict by mimicking oracle actions which can be derived from an annotated dataset. On two datasets, our bounded memory model achieves very similar performance to an unbounded variation, and reaches state-of-the-art results on LitBank.<br>
+
+<br>For more details, please see the following:<br>
+<a href="https://arxiv.org/abs/2010.02807">Learning to Ignore: Long Document Coreference with Bounded Memory Neural Networks</a><br>
+<a class="name" href="http://ttic.uchicago.edu/~shtoshni/">Shubham Toshniwal</a>,
+<a class="name" href="https://swiseman.github.io/">Sam Wiseman</a>,
+<a class="name" href="https://aetting.github.io/">Allyson Ettinger</a>,
+<a class="name" href="http://ttic.uchicago.edu/~klivescu/">Karen Livescu</a>,
+<a class="name" href="http://ttic.uchicago.edu/~kgimpel/index.html">Kevin Gimpel</a><br>
+EMNLP 2020<br>
+[<a href="https://arxiv.org/abs/2010.02807">arxiv</a>]
+[<a href="https://github.com/shtoshni92/long-doc-coref">code</a>]
+[<a href="https://colab.research.google.com/drive/1aG37Fkgg4GILFvpGE7YALEf-TWJlZgTe?usp=sharing">colab</a>] 
+[<a href="https://www.aclweb.org/anthology/2020.emnlp-main.685.bib">bib</a>]
+<br>
+<br>
+<br>
+<br>
+<span id="probing" class="maintextheader" style="font-size: 28px;">Probing for Entity and Event Information in Contextualized Embeddings</span>
+<p class="half-line">&nbsp;</p>
+Targeted diagnostic analyses are important both to assess our models' success in capturing world information, and also to establish baseline assessments of how well existing NLP models capture this information. In this project we focus on exploring the world information represented by pre-trained contextual encoders, testing systematically how this information is distributed across the contextualized representations for different tokens within each sentence.<br>
+<br>
+We design probing tasks for transitive sentences (subject-verb-object structure), and we probe each token of the sentence for information about the entity participants (subject and object nouns), and event (verb) described in the sentence. We probe for different types of features of these components -- for subject/object nouns, these include the number, gender, and animacy of the corresponding entities, and for verbs, these include the timing of the event (tense), flexibility in number of participants (causative-inchoative alternation), and whether the event is a dynamic or stative event type. Mapping the encoding of these features across token embeddings of BERT, ELMo, and GPT models, we find that most tokens of a sentence encode information about subject, object, and verb, but different encoders prioritize different types of information. Figure 1 below shows the distribution of information about the subject noun, and Figure 2 shows the distribution of information about the object noun.
+<p class="half-line">&nbsp;</p>
+Figure 1:<br>
+<img src="worldmodeling/subj.png" width="1060" class="center img-responsive">
+Figure 2:<br>
+<img src="worldmodeling/obj.png" width="1060" class="center img-responsive">
+<br>
+These figures show, for instance, that BERT, and to an extent ELMo, greatly deprioritize gender information about the entities, and ELMo in particular deprioritizes information about the object entity on subject tokens. GPT also deprioritizes object entity information, with the object token encoding more information about the subject entity than the object entity.<br>
+<br>
+For more details, please see the following:<br>
+        <a href="https://arxiv.org/abs/2005.01810">Spying on your neighbors: Fine-grained probing of contextual embeddings for information about surrounding words</a><br>
+	Josef Klafka, 
+        <a class="name" href="https://aetting.github.io/">Allyson Ettinger</a>
+	<br>ACL 2020<br>
+        [<a href="https://arxiv.org/abs/2005.01810">arxiv</a>]
+        [<a href="https://www.aclweb.org/anthology/2020.acl-main.434.bib">bib</a>]
+	<br>
+        <br>
+	<br>
+	<br>
+	<span id="complex" class="maintextheader" style="font-size: 28px;">Probing for Complex Meaning Information</span>
+	<p class="half-line">&nbsp;</p>
+The ability of a model to capture rich information about the world is critically contingent on its ability to compose complex concepts. Without this ability, models cannot accurately represent events or entities in connection with their properties (e.g., the fact that an entity is a "blue elephant" or that an event involves "studying diligently"). Ultimately, high-quality meaning composition is necessary for accurate representation of all but the very simplest information about the world -- while composition may not be necessary to recognize that a given event or entity was mentioned, composition will be necessary for representing all higher-level relationships and properties for these entities and events.<br>
+<br>
+We design analyses for testing phrase meaning composition, and we apply these tests to examine composition of two-word phrases in representations from pre-trained transformer models. Our tests are divided into two settings: "original" tests that simply measure representations' correspondence with human indicators of phrase similarity, and "controlled" tests that hold constant the amount of word overlap between phrases, removing overlap cues as a superficial aid for model performance. Examples of original and controlled ("AB-BA") phrase pairs, for our test of correlation with human similarity ratings, are below:<br>
+<br><img src="worldmodeling/bird-examples.png" width="340" class="center img-responsive">
+<br> Testing across models, layers, and representation types, we find a high level of correspondence with human judgments before control of word overlap -- however, after we control word overlap, performance drops to negligible levels. Below we show the results in both settings for the correlation analysis:<br>
+<br><img src="worldmodeling/bird.png" width="1060" class="center img-responsive">
+<br> The results suggest that the tested representations contain faithful encoding of the word content of phrases, but there is little to suggest that these representations reflect more sophisticated meaning composition. From the perspective of world modeling, these results indicate that in order to attain rich and accurate encoding of complex world information, we will need to improve models' ability to compose complex concepts.<br>
+<br>For more details, please see the following:<br>
+<a href="https://www.aclweb.org/anthology/2020.emnlp-main.397.pdf">Assessing Phrasal Representation and Composition in Transformers</a><br>
+Lang Yu, <a class="name" href="https://aetting.github.io/">Allyson Ettinger</a><br>EMNLP 2020<br>
+[<a href="https://arxiv.org/abs/2010.03763">arxiv</a>] 
+[<a href="https://www.aclweb.org/anthology/2020.emnlp-main.397.bib">bib</a>]
+	<br>
+	<br>
+	<br>
+	<br>
+	<span class="maintextheader" style="font-size: 24px;">Principal Investigators:</span>
+	<p class="half-line">&nbsp;</p>
+	<ul>
+	<li><a class="name" href="https://aetting.github.io/">Allyson Ettinger</a></li>
+	<li><a class="name" href="http://ttic.uchicago.edu/~kgimpel/index.html">Kevin Gimpel</a></li>
+	</ul>
+	<p class="half-line">&nbsp;</p>
+	<span class="maintextheader" style="font-size: 24px;">Collaborators:</span>
+	<p class="half-line">&nbsp;</p>
+	<ul>
+	<li>Josef Klafka</li>
+	<li><a class="name" href="http://ttic.uchicago.edu/~klivescu/">Karen Livescu</a></li>
+	<li><a class="name" href="https://sites.google.com/site/mrinsachan/">Mrinmaya Sachan</a></li>
+	<li><a class="name" href="http://ttic.uchicago.edu/~shtoshni/">Shubham Toshniwal</a></li>
+	<li><a class="name" href="https://swiseman.github.io/">Sam Wiseman</a></li>
+	<li>Davis Yoshida</li>
+	<li>Lang Yu</li>
+	</ul>
+	<br> 
+	<br>
+	<br>
+	<!--<p style="font-size: 18px;">-->
+	This material is based upon work supported by the National Science Foundation under Award Nos. 
+	<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1941178">1941178</a> and <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1941160">1941160</a>.<br>
+	<br> 
+	Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+	<!--</p>-->
+<hr class="bluebarfit">
+      </div>
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+

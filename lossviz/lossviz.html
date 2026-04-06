@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<!--<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>-->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Visualizing Losses for Binary Classification</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-fluid" style="padding-top: 0px;">
+      <div class="jumbotron maintext" style="background-color: #ffffff; font-family: 'Roboto', sans-serif; font-size: 20px;">
+	<!--<hr class="bluebarfit">-->
+	<span class="maintexttitle center">Visualizing Losses for Binary Classification</span>
+	<hr class="bluebarfit">
+	<br>
+This page hosts a Jupyter Notebook for plotting loss functions for binary classification.<br>
+        <br>
+	Downloads:
+	<p class="half-line">&nbsp;</p>
+	<ul>
+	<li><a href="lossviz.ipynb">lossviz.ipynb</a>: notebook for generating loss function plots</li>
+        <li><a href="loss-pdf.zip">loss-pdf.zip</a>: pdf files of the example plots below</li>
+        <li><a href="loss-png.zip">loss-png.zip</a>: png files of the example plots below</li>
+        </ul>
+
+
+	<br>The horizontal axis, <i>z</i>, represents the ground truth output <i>y*</i> multiplied by the classifier score <i>f(x)</i> for an input <i>x</i>. Since this is binary classification, <i>y*</i> is either -1 or 1 and <i>f(x)</i> is a scalar.
+	<img src="loss-perc-hinge-log.png" width="1060" class="center img-responsive">
+	<br>
+	<img src="loss-log-exp.png" width="1060" class="center img-responsive">
+	<br>
+	<img src="loss-hinge-smm.png" width="1060" class="center img-responsive">
+	<br>
+	<img src="loss-risk-ramp.png" width="1060" class="center img-responsive">
+	<br>
+        <br>
+        Please <a href="../contact.html">contact me</a> with issues, bug reports, etc.
+        <br>
+	<br>
+	<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+	<img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" /></a> 
+	All materials on this page are released under CC0 1.0 Universal (public domain).<br>
+<!--<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <span resource="[_:publisher]" rel="dct:publisher">
+    <span property="dct:title">Kevin Gimpel</span></span>
+  has waived all copyright and related or neighboring rights to
+  this work.
+</p>-->
+	<br>
+	<a href="../teaching.html">Back</a> to my teaching materials.
+	<br>
+<hr class="bluebarfit">
+      </div>
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+

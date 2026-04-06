@@ -1,0 +1,225 @@
+body {
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.navbar {
+  margin-bottom: 20px;
+}
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #22bbff;
+  border-width: 2px;
+}
+.navbar-default .navbar-brand {
+  font-size: 36px; 
+  font-weight: 600;
+  font-family:'Cabin','trebuchet ms',arial,helvetica,sans-serif;
+  color: #22bbff;
+}
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+  color: #22bbff;
+}
+.navbar-default .navbar-brand-small {
+  font-size: 24px;
+  font-weight: 500;
+  font-family:'Cabin','trebuchet ms',arial,helvetica,sans-serif;
+  color: #22bbff;
+}
+.navbar-default .navbar-brand-small:hover,
+.navbar-default .navbar-brand-small:focus {
+  color: #22bbff;
+}
+.navbar-default .navbar-nav>li>a {
+  font-size: 24px;
+  font-weight: 300;
+  font-family:'Nunito','trebuchet ms',arial,helvetica,sans-serif;
+  color: #22b0ff;
+}
+.navbar-default .navbar-nav>.active>a {
+  background-color: #22bbff;
+  color: #ffffff;
+}
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  background-color: #22bbff;
+  color: #ffffff;
+} 
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+  background-color: #22bbff;
+  color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+    border-color: #22bbff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #22bbff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #22bbff;
+}
+.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #ffffff;
+}
+
+.maintext a:link {font-weight: 400; text-decoration: none; color: #333333; OUTLINE: 0;}
+.maintext a:visited {font-weight: 400; text-decoration: none; color: #333333; OUTLINE: 0;}
+.maintext a:hover {font-weight: 400; color: #11aaff; OUTLINE: 0;}
+.maintext a:active {font-weight: 400; text-decoration: none; color: #333333; OUTLINE: 0;}
+
+.maintext a.name:link {font-weight: 300; text-decoration: none; color: #333333; OUTLINE: 0;}
+.maintext a.name:visited {font-weight: 300; text-decoration: none; color: #333333; OUTLINE: 0;}
+.maintext a.name:hover {font-weight: 300; color: #11aaff; OUTLINE: 0;}
+.maintext a.name:active {font-weight: 300; text-decoration: none; color: #333333; OUTLINE: 0;}
+
+.maintext,.maintext p {
+  COLOR: #555555;
+  font-size: 18px;
+  font-weight: 300;
+  font-family:'Nunito','trebuchet ms',arial,helvetica,sans-serif;
+}
+.container-fluid-mynavbar {
+  padding-right: 0px;
+}
+.container-fluid .jumbotron {
+  background-color: #ececf1;
+  border-radius: 0px;
+}
+.maintexttitle {
+  font-size: 45px;
+  color: #111111;
+  font-weight: 400;
+  text-align: center;
+}
+.maintextheader {
+  font-size: 20px;
+  color: #111111;
+  font-weight: 400;
+}
+.maintextminorheader {
+ font-size: 18px;
+ color: #111111;
+ font-weight: 400;
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 45.0%;
+  padding: 20px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.imgborder {
+  border: 1px solid #555;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.half-line {
+  line-height: .0em;
+}
+hr {
+ border: 0;
+}
+hr.bluebar {
+ height: 28px;
+ background-color: #33b1ff;
+}
+hr.bluebarfit {
+ height: 14px;
+ width: 1066px;
+ max-width: 100%;
+ background-color: #33b1ff;
+}
+hr.whitebar {
+ height: 20px;
+ background-color: #ececf1;
+}
+.whitelink {
+ color: #ececf1;
+}
+a.nobutton:link {color: #ececf1;}
+a.nobutton:visited {color: #ececf1;}
+a.nobutton:hover {color: #ececf1;}
+a.nobutton:active {color: #ececf1;}
+
+@media (min-width: 991px) {
+  .container-fluid .jumbotron {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  .navbar {
+    border-radius: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-fluid .jumbotron {
+    width: 1166px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  hr {
+   width: 1166px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+}
+@media (min-width: 768px) and (max-width:991px) {
+  .nav>li>a{
+    padding:15px 10px;
+  }
+  .container-fluid .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .navbar {
+    border-radius: 0px;
+  }
+}
+@media (min-width: 400px) and (max-width:768px) {
+  .container-fluid-mynavbar {
+    padding-right: 15px;
+  } 
+
+  .container-fluid .jumbotron {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (max-width:400px){
+  .container-fluid-mynavbar {
+    padding-right: 5px;
+  }
+  .navbar-default .navbar-brand {
+    font-size: 32px;
+  }
+  .navbar-default .navbar-brand-small {
+    font-size: 18px;
+  }
+  .container-fluid .jumbotron {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+}

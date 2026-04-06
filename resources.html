@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>
+    <title>Kevin Gimpel</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid container-fluid-mynavbar">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Kevin Gimpel</a> <!--<a class="navbar-brand-small" href="mailto:kgimpel@ttic.edu">kgimpel@ttic.edu</a>-->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="papers.html">papers</a></li>
+		<li><a href="group.html">group</a></li>
+              <li><a href="teaching.html">teaching</a></li>
+              <li class="active"><a href="resources.html">resources</a></li>
+              <li><a href="contact.html">contact</a></li>
+              <li><a href="etc.html">etc</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron maintext">
+
+			Below are resources that I helped develop in or before 2017. For more recent resources, see links under relevant <a href="papers.html">paper entries</a>.<br><br>
+			<br>
+			Training and validation data created for LAMBADA word prediction task; described <a href="https://arxiv.org/abs/1610.08431">here</a>.&nbsp;&nbsp;[<a href="http://ttic.uchicago.edu/~kgimpel/data/lambada-train-valid.tar.gz">lambada-train-valid.tar.gz</a> (330MB)]<br>
+			Manual analysis of 100 LAMBADA instances from paper above.&nbsp;&nbsp;[<a href="http://ttic.uchicago.edu/~kgimpel/data/lambada-analysis.tar.gz">lambada-analysis.tar.gz</a>]<br>
+			<br>
+			Code for training charagram models and pre-trained models from <a href="http://arxiv.org/abs/1607.02789">this EMNLP16 paper</a> (developed by <a href="http://ttic.uchicago.edu/~wieting/">John Wieting</a>)&nbsp;&nbsp;[<a href="https://github.com/jwieting/charagram">link</a>]<br>
+			<br>
+			Who-did-What reading comprehension dataset from <a href="http://arxiv.org/abs/1608.05457">this EMNLP16 paper</a>&nbsp;&nbsp;[<a href="http://tticnlp.github.io/who_did_what">link</a>]<br>
+			<br>
+			Resources for commonsense knowledge representation from <a href="papers/li+etal.acl16.pdf">ACL16 paper</a>&nbsp;&nbsp;[<a href="commonsense.html">link</a>]<br>
+			<br>
+			Code for training paragram phrase embeddings and other models from <a href="http://arxiv.org/abs/1511.08198">ICLR16 paper</a> (developed by <a href="http://ttic.uchicago.edu/~wieting/">John Wieting</a>)&nbsp;&nbsp;[<a href="https://github.com/jwieting/iclr2016">link</a>]<br>
+			<br>
+			Pretrained paragram word embeddings and annotated phrase similarity datasets (developed by <a href="http://ttic.uchicago.edu/~wieting/">John Wieting</a>)&nbsp;&nbsp;[<a href="http://ttic.uchicago.edu/~wieting/">link</a>]<br>
+			<br>
+			Rampion, a framework for training statistical machine translation models 
+			&nbsp;[<a href="http://www.cs.cmu.edu/~ark/MT/">link</a>]<br>
+			<br>
+			Twitter part-of-speech tagger and tweets manually annotated with part-of-speech tags
+			&nbsp;[<a href="http://www.cs.cmu.edu/~ark/TweetNLP/">link</a>]<br>
+			<br>
+			NFL game data and aligned tweets
+                        &nbsp;[<a href="http://www.cs.cmu.edu/~ark/football/">link</a>]<br>
+			<br>
+			Code for performing inference for monolingual and bilingual gappy pattern models
+			&nbsp;[<a href="http://www.cs.cmu.edu/~ark/MT/">link</a>] [<a href="sample-patterns.html">sample patterns</a>]<br>
+			<br>
+			Code to find trigger word pairs using mutual information (reimplementation of <a href="http://www.cs.cmu.edu/~roni/papers/me-thesis-TR-94-138.pdf">Rosenfeld, 1994</a>)
+			&nbsp;[<a href="software/comp_triggers.tar.gz">code</a>]<br>
+			<br>
+        		Factoid question-answer pairs from Wikipedia articles with difficulty ratings&nbsp;[<a href="http://www.cs.cmu.edu/~ark/QA-data/">link</a>]<br>
+<br>
+			Scripts for performing bootstrap resampling for BLEU significance testing
+                        &nbsp;[<a href="http://www.cs.cmu.edu/~ark/MT/">link</a>]<br>
+                        <br>
+      </div>
+
+<!--<div class="jumbotron maintext">-->
+      <hr class="bluebar">
+    <!--</div>-->
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
