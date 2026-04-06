@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>
+    <title>31190: Natural Language Processing</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid container-fluid-mynavbar">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">TTIC 31190: Natural Language Processing</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="lectures.html">lectures</a></li>
+              <li><a href="assignments.html">assignments</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron maintext">
+
+	This is the lectures page for the Spring 2018 course webpage for TTIC 31190: Natural Language Processing.<br><br>
+	<br>
+	Mar. 26, 2018: <a href="lectures/lect1-intro-words.pdf">Lecture 1: Introduction; Words</a><br>
+	readings: <a href="https://www.cs.colorado.edu/~martin/slp.html">SLP2</a> <a href="https://www.cs.colorado.edu/~martin/SLP/Updates/1.pdf">Chapter 1</a><br>
+	<br>
+	Mar. 28, 2018: <a href="lectures/lect2-words.pdf">Lecture 2: Words, Morphology, Distributional Word Vectors</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/15.pdf">Chapter 15</a>; <a href="http://www.aaai.org/Papers/JAIR/Vol37/JAIR-3705.pdf">Turney and Pantel (2010)</a> 
+	<br><br>
+	Apr. 2, 2018: <a href="lectures/lect3-word-sense.pdf">Lecture 3: Word Sense and Lexical Semantics</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/16.pdf">Section 16.1 of Chapter 16</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/17.pdf">Chapter 17</a><br><br>
+	Apr. 4, 2018: <a href="lectures/lect4-textcat1.pdf">Lecture 4: Text Classification (Datasets and Modeling)</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">Sections 7.0 to 7.2 of Chapter 7</a>; <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037">NNM4NLP</a> Chapters 6-7<br>
+	<br>
+	Apr. 9, 2018: <a href="lectures/lect5-textcat2.pdf">Lecture 5: Text Classification (Learning)</a><br>
+	readings: <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037">NNM4NLP</a> Sections 2.7-2.8; <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">Section 7.3 to the end of Chapter 7</a><br>
+	<br>
+	Apr. 11, 2018: <a href="lectures/lect6-textcat3-lm.pdf">Lecture 6: Learning for Classification; Language Modeling</a><br>
+	readings: <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037">NNM4NLP</a> Sections 9.1-9.3<br>
+	<br>
+	Apr. 16, 2018: <a href="lectures/lect7-lm.pdf">Lecture 7: Language Modeling, Smoothing, Neural Language Models</a><br>
+	readings: <a href="http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf">Collins' notes</a>; <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf">Chapter 4</a>; <a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf">Sections 8.1-8.4 of Chapter 8</a>; Section 4 of <a href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">Goldberg's primer</a><br>
+	<br>
+	Apr. 18, 2018: Short quiz at start of class; <a href="lectures/lect8-lm-word-embeddings.pdf">Lecture 8: Neural Language Models and Word Embeddings</a><br>
+	readings: <a href="http://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf">Bengio et al. (2003)</a>; <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf">Section 8.5 of Chapter 8</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/16.pdf">Section 16.2 of Chapter 16</a>; <a href="https://anvaka.github.io/pm/#/galaxy/word2vec-wiki?cx=961&cy=-3646&cz=6387&lx=0.3902&ly=-0.4880&lz=-0.0434&lw=0.7796&ml=300&s=1.75&l=1&v=d50_clean_small">word embedding visualization</a><br>
+	<br>
+	Apr. 23, 2018: <a href="lectures/lect9-word-embeddings.pdf">Lecture 9: Word Embeddings</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/16.pdf">Sections 16.2-16.3 of Chapter 16</a>; Section 5 of <a href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">Goldberg's primer</a><br>
+	<br>
+	Apr. 25, 2018: <a href="lectures/lect10-nns.pdf">Lecture 10: Recurrent, Recursive, and Convolutional Neural Networks for NLP</a><br>
+	readings: Sections 9&ndash;11 of <a href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">Goldberg's primer</a>; <a href="http://www.aclweb.org/anthology/D14-1181">Kim (2014)</a><br>
+	demo: <a href="lstmdemo.zip">lstmdemo.zip</a><br>
+	<br>
+	April 30, 2018: <a href="lectures/lect11-seq-labeling.pdf">Lecture 11: POS Tagging and Sequence Labeling</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf">Sections 10.0&ndash;10.3 of Chapter 10</a><br>
+	<br>
+	May 2, 2018: <a href="lectures/lect12-seq-labeling2.pdf">Lecture 12: Sequence Labeling and Structured Prediction</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf">Sections 10.4&ndash;10.6 of Chapter 10</a>; <a href="http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf">Collins' notes on HMMs</a><br>
+	<br>
+	May 7, 2018: <a href="lectures/lect13-brownclust-syntax.pdf">Lecture 13: Brown Clustering; Syntax</a><br>
+	readings: <a href="http://www.colinphillips.net/wp-content/uploads/2014/08/phillips2003-syntax.pdf">Phillips (2003)</a>; <a href="http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf">Collins' notes on PCFGs</a>; <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/12.pdf">Chapter 12</a><br>
+	<br>
+	May 9, 2018: <a href="lectures/lect14-syntax-parsing.pdf">Lecture 14: Syntax and Parsing</a><br>
+	readings: <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> <a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf">Chapter 13</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf">Chapter 14</a><br>
+	<br>
+	May 14, 2018: <a href="lectures/lect15-midterm-review.pdf">Lecture 15: Review for Midterm</a><br>
+	<br>
+	May 16, 2018: Midterm<br>
+	<br>
+	May 21, 2018: <a href="lectures/lect16-mt1.pdf">Lecture 16: Machine Translation</a><br>
+	readings: <a href="https://arxiv.org/abs/1709.07809">Philipp Koehn's notes on NMT</a><br>
+	<br>
+	May 23, 2018: <a href="lectures/lect17-mt2.pdf">Lecture 17: Machine Translation; Semantics</a><br>
+	<br>
+	May 28, 2018: No Class (Memorial Day)<br>
+	<br>
+	May 30, 2018: <a href="lectures/lect18-semantics-noamr.pdf">Lecture 18: Semantics</a><br>
+	<br>
+<br><br><br><br>
+	<i>Note to those interested in reusing these course materials: Please do so! No attribution needed. PowerPoint files are also posted; just change the extension from pdf to pptx. Note that some slides were taken or adapted from Jurafsky and Martin's <a href="https://web.stanford.edu/~jurafsky/slp3">SLP3</a> slides.</i><br>
+	<br>
+	<i>Note: Lectures 12, 13, and 15 were updated on Feb. 7, 2019 to correct some errors in the description of HMMs.</i>
+      </div>
+
+<!--<div class="jumbotron maintext">-->
+      <hr class="bluebar">
+    <!--</div>-->
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

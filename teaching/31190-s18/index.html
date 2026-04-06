@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+<link href='https://fonts.googleapis.com/css?family=Cabin:600|Nunito:400,300' rel='stylesheet' type='text/css'>
+    <title>31190: Natural Language Processing</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../styles.kgimpel.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  body {
+    overflow-y: scroll;
+  }
+  </style>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid container-fluid-mynavbar">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">TTIC 31190: Natural Language Processing</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="lectures.html">lectures</a></li>
+              <li><a href="assignments.html">assignments</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron maintext">
+
+	This is the course webpage for the Spring 2018 version of TTIC 31190: Natural Language Processing.<br>
+	For the Winter 2016 course, go <a href="../31190/index.html">here</a>.<br><br>
+	<span class="maintextminorheader">Quarter:</span> Spring 2018<br>
+	<span class="maintextminorheader">Time:</span> Monday/Wednesday 1:30-2:50 pm<br>
+	<span class="maintextminorheader">Location:</span> Room 526 (fifth floor), <a class="name" href="http://www.ttic.edu/">TTIC</a><br>
+	<br>
+	<span class="maintextminorheader">Instructor:</span> <a class="name" href="http://ttic.uchicago.edu/~kgimpel/index.html">Kevin Gimpel</a><br>
+	<span class="maintextminorheader">Instructor Office Hours:</span> Mondays 3-4pm, Room 531, <a class="name" href="http://www.ttic.edu/">TTIC</a>, or by appointment<br>
+	<span class="maintextminorheader">Teaching Assistant:</span> <a class="name" href="http://ttic.uchicago.edu/~lifu/">Lifu Tu</a><br>
+	<span class="maintextminorheader">Teaching Assistant Office Hours:</span> Wednesdays 3-4pm, Room 501, <a class="name" href="http://www.ttic.edu/">TTIC</a><br>
+	<br>
+	<span class="maintextminorheader">Midterm:</span> Wednesday, May 16<br>
+	<br>
+	<span class="maintextminorheader">Prerequisites:</span> 
+	There are no formal course prerequisites. However, I will assume that you have some programming experience, including familiarity with basic data structures and algorithms. No specific programming language will be required. I will also assume that you are familiar with basic concepts from calculus, linear algebra, and probability. A machine learning course is recommended but not required.<br>
+	<br>
+	<!--<p>
+	Note (3/26/18): Even though the enrollment system shows that there are still open seats for the course, those numbers are misleading because they only include students who register through UChicago's system. TTIC students who only register through TTIC's system are not included in that count. The class is currently full, but if you are within the first five positions of the waitlist (I have emailed you if so), then I'd suggest attending lectures---I'll keep you posted as your position on the waitlist changes.--> 
+<!--
+f you have requested to be added to the waitlist, you should have received an email from me with your current status on the waitlist and an idea of the likelihood that you will be able to take the course. To register for the course, you will need to submit an online consent form when they <a href="https://registrar.uchicago.edu/page/online-consent-form">become available</a>.-->
+<!--Unfortunately we will not be able to have any auditors due to room capacity constraints.<br>
+	</p>-->
+<br>
+<span class="maintextheader">Contents:</span><br>
+	<a href="#textbooks">Textbooks</a><br>
+	<a href="#grading">Grading</a><br>
+	<a href="#topics">Topics</a><br>
+	<a href="#project">Project</a><br>
+	<a href="#collab">Collaboration Policy</a><br>
+	<a href="#lateness">Lateness Policy</a><br>
+	<br><br>
+
+	<a name="textbooks"></a>
+<span class="maintextheader">Textbooks</span><br>
+	All textbooks are optional. We will post optional readings from the following texts to accompany lecture slides.<br>
+	<br>
+	<a href="https://www.cs.colorado.edu/~martin/slp.html">SLP2</a>: Daniel Jurafsky and James H. Martin.  Speech and Language Processing (2nd Edition). Pearson: Prentice Hall. 2009.<br>
+
+	<a href="https://web.stanford.edu/~jurafsky/slp3/">SLP3</a>: Drafts of some chapters of the 3rd edition are <a href="https://web.stanford.edu/~jurafsky/slp3/">freely available online</a>.<br><br>
+
+	<a href="http://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037">NNM4NLP</a>: Yoav Goldberg. Neural Network Methods for Natural Language Processing. 2017.<br>
+	Two copies will be on reserve in the TTIC library. An earlier draft is <a href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">freely available online</a>.<br>
+<br>
+
+	<br><br><br>
+
+	<a name="grading"></a>
+<span class="maintextheader">Grading</span><br>
+	3 assignments (15% each)<br>
+midterm exam (15%) (Wednesday, May 16)<br>
+course project (30%):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+project proposal (5%)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+final report (25%)<br>
+class participation, including in-class quizzes (10%)<br>
+<br>
+<br><br>
+
+	<a name="topics"></a>
+<span class="maintextheader">Topics</span><br>
+	<ul>
+	<li>Introduction: NLP applications, challenges of computing with language</li>
+	<li>Words: tokenization, morphology, distributional semantics, lexical semantics</li>
+	<li>Text Classification: sentiment analysis, classifiers, linear models, features, loss functions, stochastic gradient descent</li>
+	<li>Neural NLP: representation learning, word embeddings, neural methods for classification</li>
+	<li>Language Modeling: n-gram models, smoothing, neural language models, methods for learning word embeddings</li>
+	<li>Neural Architectures for NLP: recurrent, recursive, and convolutional nets for NLP</li>
+	<li>Sequence Labeling: part-of-speech tagging, named entity recognition, hidden Markov models, conditional random fields, dynamic programming</li>
+        <li>Syntax: constituency and dependency syntax, grammars, parsing algorithms</li>
+	<li>Semantics: compositionality, semantic role labeling, frame semantics, semantic parsing</li>
+	<li>Machine Translation: word alignment, translation modeling, decoding, neural machine translation</li>
+	<li>Other NLP Tasks: coreference resolution, question answering, summarization, conversational agents</li>
+	</ul>
+<br><br><br>
+        <a name="project"></a>
+<span class="maintextheader">Project</span><br>
+	The project must be done in a group of two or three. Each member of the group will receive the same grade for the project.<br>
+	The project proposal is due May 9. Details are provided <a href="31190-2018-proj-proposal.pdf">here</a>.<br>
+        The final project report is due <s>June 6</s> June 7 (<s>May 30</s> May 31 for graduating students). Details are provided <a href="31190-2018-proj-report.pdf">here</a>.<br>
+        For the report, use the <a href="http://acl2018.org/downloads/acl18-latex.zip">LaTeX</a> or <a href="http://acl2018.org/downloads/acl18-word.zip">Microsoft Word</a> templates prepared for ACL 2018.<br>
+	<br><br><br>
+        <a name="collab"></a>
+<span class="maintextheader">Collaboration Policy</span><br>
+You are welcome to discuss assignments with others in the course, but solutions and code must be written individually.<br>
+	<br><br><br>
+	<a name="lateness"></a>
+	<span class="maintextheader">Lateness Policy</span><br>
+	If you turn in an assignment late, a penalty will be assessed. 
+	The penalty will be 2% (of the entire point total) per hour late.<br>
+	<br>
+	You will have 4 late days to use as you wish during the quarter. Late days must be used in whole increments (i.e., if you turn in an assignment 6 hours late and want to use a late day to avoid penalty, it will cost an entire late day to do so). 
+	<br>
+      </div>
+
+<!--<div class="jumbotron maintext">-->
+      <hr class="bluebar">
+    <!--</div>-->
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
